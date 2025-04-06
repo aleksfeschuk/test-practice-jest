@@ -1,14 +1,14 @@
-import { capitalize } from "./function.js";
+import { capitalize } from "./functions.js";
 test('capitalizes the first letter', () => {
-    expect(capitalize('hello').toBe('Hello'));
+    expect(capitalize('hello')).toBe('Hello');
 });
 
-import { reverseString } from "./function.js";
+import { reverseString } from "./functions.js";
 test('reverses a string', () => {
-    expect(reverseString('hello').toBe('olleh'));
+    expect(reverseString('hello')).toBe('olleh');
 });
 
-import { calculator } from "./function.js";
+import { calculator } from "./functions.js";
 test('calculator operations', () => {
     expect(calculator.add(2, 3)).toBe(5);
     expect(calculator.subtract(5, 2)).toBe(3);
@@ -16,11 +16,11 @@ test('calculator operations', () => {
     expect(calculator.multiply(2, 4)).toBe(8);
 });
 
-import { caesarCipher } from "./function.js";
+import { caesarCipher } from "./functions.js";
 test('caesar cipher shifts correctly', () => {
     expect(caesarCipher('xyz', 3)).toBe('abc');
-    expect(caesarCipher('Hello', 3)).toB('KhOOr');
-    expect(caesarCipher('Hello, World!', 3)).toBe('Khoor, Zruog');
+    expect(caesarCipher('HeLLo', 3)).toBe('KhOOr');
+    expect(caesarCipher('Hello, World!', 3)).toBe('Khoor, Zruog!');
 });
 
 export function analyzeArray(arr) {
