@@ -12,3 +12,15 @@ export const calculator = {
     divide: (a, b) => a / b,
     multiply: (a, b) => a * b,
 };
+
+export function caesarCipher(str, shift) {
+    const alphabet = 'abcdefghijklmnopqrstuvwxyz';
+    return str.split('').map(char => {
+        if (!alphabet.includes(char.toLowerCase())) return char;
+        const isUpperCase = char === char.toUpperCase();
+        const index = alphabet.indexOf(char.toLowerCase());
+        const newIndex = (index + shift) % 26;
+        const newChar = alphabet[newIndex];
+        return isUpperCase ? newChar.toUpperCase() : newChar;
+    }).join('');
+}

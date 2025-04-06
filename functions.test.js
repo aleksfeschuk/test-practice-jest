@@ -16,3 +16,9 @@ test('calculator operations', () => {
     expect(calculator.multiply(2, 4)).toBe(8);
 });
 
+import { caesarCipher } from "./function.js";
+test('caesar cipher shifts correctly', () => {
+    expect(caesarCipher('xyz', 3)).toBe('abc');
+    expect(caesarCipher('Hello', 3)).toB('KhOOr');
+    expect(caesarCipher('Hello, World!', 3)).toBe('Khoor, Zruog');
+});
