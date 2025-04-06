@@ -22,3 +22,12 @@ test('caesar cipher shifts correctly', () => {
     expect(caesarCipher('Hello', 3)).toB('KhOOr');
     expect(caesarCipher('Hello, World!', 3)).toBe('Khoor, Zruog');
 });
+
+export function analyzeArray(arr) {
+    return {
+        average: arr.reduce((sum, num) => sum + num, 0) / arr.length,
+        min: Math.min(...arr),
+        max: Math.max(...arr),
+        length: arr.length,
+    };
+}
